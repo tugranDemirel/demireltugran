@@ -164,7 +164,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 //        Yajra
         Yajra\DataTables\DataTablesServiceProvider::class,
-
+//        Intervention
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -234,6 +235,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 //        Yajra
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+//        Intervention
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
