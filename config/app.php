@@ -1,5 +1,6 @@
 <?php
-
+define('SITE_STATUS_ACTIVE', 1);
+define('SITE_STATUS_PASSIVE', 0);
 return [
 
     /*

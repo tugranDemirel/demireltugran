@@ -21,6 +21,7 @@ class CreateSiteSettingsTable extends Migration
             $table->string('profileImage');
             $table->string('backgroundImage');
             $table->string('aboutImage');
+            $table->integer('status')->default(1);
             $table->string('logo')->nullable();
             $table->string('svg')->nullable();
             $table->string('phoneNumber');
