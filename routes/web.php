@@ -21,5 +21,9 @@ Auth::routes();
 
 Route::name('home')->prefix('home')->group(function (){
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::prefix('site-ayarlari')->name('site-ayarlari')->group(function (){
+        Route::get('/', [App\Http\Controllers\admin\siteSetting\indexController::class, 'index'])->name('index');
+    });;
 });
 
