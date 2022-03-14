@@ -1,5 +1,3 @@
-Deneme 
-![WIN_20220210_18_18_11_Pro](https://user-images.githubusercontent.com/49235236/158235468-7f7be5c9-37d3-4b1d-b6a1-37b0e7469970.jpg)
 
 ## About Laravel
 
