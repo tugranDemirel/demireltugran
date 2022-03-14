@@ -1,5 +1,6 @@
 Deneme 
-![](C:/Users/Tuğran Demirel/Pictures/Camera Roll/WIN_20220210_18_18_11_Pro.jpg)
+![WIN_20220210_18_18_11_Pro](https://user-images.githubusercontent.com/49235236/158235468-7f7be5c9-37d3-4b1d-b6a1-37b0e7469970.jpg)
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
