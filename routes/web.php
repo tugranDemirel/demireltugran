@@ -24,7 +24,7 @@ Route::name('home.')->prefix('home')->group(function (){
 
     Route::prefix('setting')->name('setting.')->group(function (){
         Route::get('/', [App\Http\Controllers\admin\siteSetting\indexController::class, 'index'])->name('index');
-        Route::post('/update{id}', [App\Http\Controllers\admin\siteSetting\indexController::class, 'update'])->name('update');
+        Route::post('/update/{id}', [App\Http\Controllers\admin\siteSetting\indexController::class, 'update'])->name('update');
     });;
 });
 

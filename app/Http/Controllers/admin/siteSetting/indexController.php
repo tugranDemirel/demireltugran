@@ -19,13 +19,14 @@ class indexController extends Controller
     {
         $all = $request->except('_token');
         $data = SiteSetting::where('id', 1)->get();
-        $all['profileImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('photo'), 0, $data, 'profileImage');
-        $all['backgroundImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('photo'), 0, $data, 'backgroundImage');
-        $all['aboutImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('photo'), 0, $data, 'aboutImage');
-        $all['logo'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('photo'), 0, $data, 'logo');
-        $all['svg'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('photo'), 0, $data, 'svg');
-        $all['contactImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('photo'), 0, $data, 'contactImage');
+        $all['profileImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('profileImage'), 0, $data, 'profileImage');
+        $all['backgroundImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('backgroundImage'), 0, $data, 'backgroundImage');
+        $all['aboutImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('aboutImage'), 0, $data, 'aboutImage');
+        $all['logo'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('logo'), 0, $data, 'logo');
+        $all['svg'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('svg'), 0, $data, 'svg');
+        $all['contactImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('contactImage'), 0, $data, 'contactImage');
         $update = SiteSetting::where('id', 1)->update($all);
+
         if ($update)
         {
             return redirect()->back()->with('status', 'Güncelleme işlemi başarılı bir şekilde gerçekleştirildi');
