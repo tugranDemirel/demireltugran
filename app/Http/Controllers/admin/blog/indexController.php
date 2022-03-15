@@ -85,21 +85,23 @@ class indexController extends Controller
     public function data(Request $request)
     {
         $table = Blog::query();
+
         $data = DataTables::of($table)
-            ->addColumn('edit', function ($table){
-                return '<a href="'.route('home.blog.edit', ['id'=>$table]).'">Düzenle</a>';
-            })
-            ->addColumn('delete', function ($table){
-                return '<a href="'.route('home.blog.delete', ['id'=>$table]).'">Delete</a>';
-            })
             ->addColumn('title', function ($table){
                 return Blog::getTitle($table->id);
             })
             ->addColumn('image', function ($table){
-                return Blog::getImage($table->id);
+                return '<img src="'. asset(Blog::getImage($table->id)).'" alt="..." class="img-thumbnail">';
             })
-            ->rawColumns(['edit', 'delete', 'title'])
+            ->addColumn('edit', function ($table){
+                return '<a href="'.route('home.blog.edit', ['id'=>$table->id]).'">Düzenle</a>';
+            })
+            ->addColumn('delete', function ($table){
+                return '<a href="'.route('home.blog.delete', ['id'=>$table->id]).'">Delete</a>';
+            })
+            ->rawColumns(['image', 'edit', 'delete'])
             ->make(true);
+        return $data;
     }
 
 }
