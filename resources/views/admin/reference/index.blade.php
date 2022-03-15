@@ -31,7 +31,7 @@
             <div class="col-md-12 widget-holder">
                 <div class="widget-bg">
                     <div class="widget-heading clearfix">
-                        <h5>Kalem Listesi</h5>
+                        <h5>Referans Listesi</h5>
                     </div>
                     <!-- /.widget-heading -->
                     <div class="widget-body clearfix">
@@ -39,7 +39,7 @@
                             <thead>
                             <tr>
                                 <th>Görsel</th>
-                                <th>Blog Adı</th>
+                                <th>Referans Adı</th>
                                 <th>Düzenle</th>
                                 <th>Sil</th>
                             </tr>
@@ -82,7 +82,7 @@
                 ajax: {
                     type:'POST',
                     headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'},
-                    url: '{{route('home.blog.data')}}',
+                    url: '{{route('home.reference.data')}}',
                     data: function (d) {
                         d.startDate = $('#datepicker_from').val();
                         d.endDate = $('#datepicker_to').val();
@@ -90,7 +90,7 @@
                 },
                 columns: [
                     { data: 'image', name: 'image'},
-                    { data: 'title', name: 'title'},
+                    { data: 'name', name: 'name'},
                     { data: 'edit', name: 'edit', orderable: false, searchable: false },
                     { data: 'delete', name: 'delete', orderable: false, searchable: false }
                 ]

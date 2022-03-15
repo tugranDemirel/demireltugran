@@ -25,7 +25,7 @@ class indexController extends Controller
         $all = $request->except('_token');
         $all['userId'] = Auth::id();
         $data = Auth::id();
-        $all['contactImage'] = fileUpload::changeUpload(rand(1,1000), 'blog', $request->file('image'), 0, $data, 'blog');
+        $all['contactImage'] = fileUpload::newUpload(rand(1,1000), 'blog', $request->file('image'), 0);
         $create = Blog::create($all);
         if ($create)
         {
