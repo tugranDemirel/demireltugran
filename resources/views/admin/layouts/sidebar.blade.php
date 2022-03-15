@@ -197,21 +197,8 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-item-has-children"><a href="javascript:void(0);"><i class="list-icon feather feather-heart"></i> <span class="hide-menu">Icons</span></a>
-            <ul class="list-unstyled sub-menu">
-                <li><a href="../default/icons-material-design.html">Material Design</a>
-                </li>
-                <li><a href="../default/icons-font-awesome.html">Font Awesome</a>
-                </li>
-                <li><a href="../default/icons-mono-social.html">Social Icons</a>
-                </li>
-                <li><a href="../default/icons-weather.html">Weather Icons</a>
-                </li>
-                <li><a href="../default/icons-linea.html">Linea Icons</a>
-                </li>
-                <li><a href="../default/icons-feather.html">Feather Icons</a>
-                </li>
-            </ul>
+        <li class="menu-item-has-children"><a href="{{ route('home.setting.index') }}"><i class="list-icon feather feather-settings"></i> <span class="hide-menu">Site Ayarları</span></a>
+
         </li>
     </ul>
     <!-- /.side-menu -->
