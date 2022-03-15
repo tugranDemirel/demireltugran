@@ -12,13 +12,13 @@ class indexController extends Controller
     //
     public function index()
     {
-        $siteSetting = SiteSetting::where('id', 1)->get();
+        $siteSetting = SiteSetting::getContent(1);
         return view('admin.siteSetting.index', compact('siteSetting'));
     }
     public function update(Request $request)
     {
         $all = $request->except('_token');
-        $data = SiteSetting::where('id', 1)->get();
+        $data = SiteSetting::getContent(1);
         $all['profileImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('profileImage'), 0, $data, 'profileImage');
         $all['backgroundImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('backgroundImage'), 0, $data, 'backgroundImage');
         $all['aboutImage'] = fileUpload::changeUpload(rand(1,1000), 'profil', $request->file('aboutImage'), 0, $data, 'aboutImage');

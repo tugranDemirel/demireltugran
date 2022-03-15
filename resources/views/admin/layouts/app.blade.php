@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/demo/favicon.png">
     <link rel="stylesheet" href="assets/css/pace.css">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Default</title>
+    <title>@yield('title')</title>
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600|Roboto:400" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/vendors/material-icons/material-icons.css') }}" rel="stylesheet" type="text/css">
@@ -135,7 +135,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.25/daterangepicker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/1.1.1/mithril.js"></script>
-<script src="assets/vendors/theme-widgets/widgets.js"></script>
+<script src="{{ asset('assets/vendors/theme-widgets/widgets.js') }}"></script>
 <script src="{{ asset('admin/assets/js/theme.js') }}"></script>
 <script src="{{ asset('admin/assets/js/custom.js') }}"></script>
 @yield('js')

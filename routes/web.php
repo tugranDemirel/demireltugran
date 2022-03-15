@@ -26,5 +26,14 @@ Route::name('home.')->prefix('home')->group(function (){
         Route::get('/', [App\Http\Controllers\admin\siteSetting\indexController::class, 'index'])->name('index');
         Route::post('/update/{id}', [App\Http\Controllers\admin\siteSetting\indexController::class, 'update'])->name('update');
     });;
+    Route::prefix('blog')->name('blog.')->group(function (){
+        Route::get('/', [App\Http\Controllers\admin\blog\indexController::class, 'index'])->name('index');
+        Route::get('/create', [App\Http\Controllers\admin\blog\indexController::class, 'create'])->name('create');
+        Route::post('/store', [App\Http\Controllers\admin\blog\indexController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [App\Http\Controllers\admin\blog\indexController::class, 'edit'])->name('edit');
+        Route::post('/update/{id}', [App\Http\Controllers\admin\blog\indexController::class, 'update'])->name('update');
+        Route::get('/delete/{id}', [App\Http\Controllers\admin\blog\indexController::class, 'delete'])->name('delete');
+        Route::post('/data', [App\Http\Controllers\admin\blog\indexController::class, 'data'])->name('data');
+    });
 });
 
