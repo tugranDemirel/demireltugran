@@ -73,7 +73,7 @@
                         <ul class="list-unstyled card-body">
                             <li><a href="#"><span><span class="align-middle">Hesap Ayarları</span></span></a>
                             </li>
-                            <li><a href="#"><span><span class="align-middle">Çıkış Yap</span></span></a>
+                            <li><a href="{{ route('home.logout') }}"><span><span class="align-middle">Çıkış Yap</span></span></a>
                             </li>
                         </ul>
                     </div>

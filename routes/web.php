@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::name('home.')->prefix('home')->group(function (){
+Route::name('home.')->prefix('home')->middleware('auth')->group(function (){
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::prefix('setting')->name('setting.')->group(function (){
@@ -68,5 +68,6 @@ Route::name('home.')->prefix('home')->group(function (){
         Route::post('/answer/{id}', [App\Http\Controllers\admin\contact\indexController::class, 'send'])->name('send');
         Route::post('/data', [App\Http\Controllers\admin\contact\indexController::class, 'data'])->name('data');
     });
+    Route::get('/logout', [App\Http\Controllers\admin\indexController::class, 'logout'])->name('logout');
 });
 
