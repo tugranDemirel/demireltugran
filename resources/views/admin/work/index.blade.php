@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    Bloglar
+    Projeler
 @endsection
 @section('css')
 @endsection
@@ -8,16 +8,16 @@
     <!-- Page Title Area -->
     <div class="row page-title clearfix">
         <div class="page-title-left">
-            <h6 class="page-title-heading mr-0 mr-r-5">Referans Listesi</h6>
+            <h6 class="page-title-heading mr-0 mr-r-5">Proje Listesi</h6>
         </div>
         <!-- /.page-title-left -->
         <div class="page-title-right d-none d-sm-inline-flex">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Panel</a>
                 </li>
-                <li class="breadcrumb-item active">Referans</li>
+                <li class="breadcrumb-item active">Proje</li>
             </ol>
-            <div class="d-none d-md-inline-flex justify-center align-items-center"><a href="javascript: void(0);" class="btn btn-color-scheme btn-sm fs-11 fw-400 mr-l-40 pd-lr-10 mr-l-0-rtl mr-r-40-rtl hidden-xs hidden-sm ripple" target="_blank">Referans Listesi</a>
+            <div class="d-none d-md-inline-flex justify-center align-items-center"><a href="javascript: void(0);" class="btn btn-color-scheme btn-sm fs-11 fw-400 mr-l-40 pd-lr-10 mr-l-0-rtl mr-r-40-rtl hidden-xs hidden-sm ripple" target="_blank">Proje Listesi</a>
             </div>
         </div>
         <!-- /.page-title-right -->
@@ -31,7 +31,7 @@
             <div class="col-md-12 widget-holder">
                 <div class="widget-bg">
                     <div class="widget-heading clearfix">
-                        <h5>Kalem Listesi</h5>
+                        <h5>Proje Listesi</h5>
                     </div>
                     <!-- /.widget-heading -->
                     <div class="widget-body clearfix">
@@ -39,7 +39,8 @@
                             <thead>
                             <tr>
                                 <th>Görsel</th>
-                                <th>Blog Adı</th>
+                                <th>Proje Adı</th>
+                                <th>Proje URL</th>
                                 <th>Düzenle</th>
                                 <th>Sil</th>
                             </tr>
@@ -82,7 +83,7 @@
                 ajax: {
                     type:'POST',
                     headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'},
-                    url: '{{route('home.blog.data')}}',
+                    url: '{{route('home.work.data')}}',
                     data: function (d) {
                         d.startDate = $('#datepicker_from').val();
                         d.endDate = $('#datepicker_to').val();
@@ -91,6 +92,7 @@
                 columns: [
                     { data: 'image', name: 'image'},
                     { data: 'title', name: 'title'},
+                    { data: 'url', name: 'url'},
                     { data: 'edit', name: 'edit', orderable: false, searchable: false },
                     { data: 'delete', name: 'delete', orderable: false, searchable: false }
                 ]
