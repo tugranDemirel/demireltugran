@@ -36,7 +36,7 @@
         </li>
         <li class="menu-item-has-children"><a href="javascript:void(0);"><i class="list-icon feather feather-message-circle"></i> <span class="hide-menu">Mesajlar</span></a>
             <ul class="list-unstyled sub-menu">
-                <li><a href="{{ route('home.work.index') }}">Mesaj Listesi</a>
+                <li><a href="{{ route('home.contact.index') }}">Mesaj Listesi</a>
                 </li>
             </ul>
         </li>

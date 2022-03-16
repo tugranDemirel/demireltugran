@@ -62,5 +62,11 @@ Route::name('home.')->prefix('home')->group(function (){
         Route::get('/delete/{id}', [App\Http\Controllers\admin\work\indexController::class, 'delete'])->name('delete');
         Route::post('/data', [App\Http\Controllers\admin\work\indexController::class, 'data'])->name('data');
     });
+    Route::prefix('contact')->name('contact.')->group(function (){
+        Route::get('/', [App\Http\Controllers\admin\contact\indexController::class, 'index'])->name('index');
+        Route::get('/answer/{id}', [App\Http\Controllers\admin\contact\indexController::class, 'answer'])->name('answer');
+        Route::post('/answer/{id}', [App\Http\Controllers\admin\contact\indexController::class, 'send'])->name('send');
+        Route::post('/data', [App\Http\Controllers\admin\contact\indexController::class, 'data'])->name('data');
+    });
 });
 
