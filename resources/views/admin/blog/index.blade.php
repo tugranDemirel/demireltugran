@@ -8,16 +8,16 @@
     <!-- Page Title Area -->
     <div class="row page-title clearfix">
         <div class="page-title-left">
-            <h6 class="page-title-heading mr-0 mr-r-5">Referans Listesi</h6>
+            <h6 class="page-title-heading mr-0 mr-r-5">Blog Listesi</h6>
         </div>
         <!-- /.page-title-left -->
         <div class="page-title-right d-none d-sm-inline-flex">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Panel</a>
                 </li>
-                <li class="breadcrumb-item active">Referans</li>
+                <li class="breadcrumb-item active">Blog</li>
             </ol>
-            <div class="d-none d-md-inline-flex justify-center align-items-center"><a href="javascript: void(0);" class="btn btn-color-scheme btn-sm fs-11 fw-400 mr-l-40 pd-lr-10 mr-l-0-rtl mr-r-40-rtl hidden-xs hidden-sm ripple" target="_blank">Referans Listesi</a>
+            <div class="d-none d-md-inline-flex justify-center align-items-center"><a href="javascript: void(0);" class="btn btn-color-scheme btn-sm fs-11 fw-400 mr-l-40 pd-lr-10 mr-l-0-rtl mr-r-40-rtl hidden-xs hidden-sm ripple" target="_blank">Blog Listesi</a>
             </div>
         </div>
         <!-- /.page-title-right -->
@@ -31,7 +31,7 @@
             <div class="col-md-12 widget-holder">
                 <div class="widget-bg">
                     <div class="widget-heading clearfix">
-                        <h5>Kalem Listesi</h5>
+                        <h5>Blog Listesi</h5>
                     </div>
                     <!-- /.widget-heading -->
                     <div class="widget-body clearfix">
