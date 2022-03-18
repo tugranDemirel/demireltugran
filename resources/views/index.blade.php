@@ -146,7 +146,7 @@
                                                                 <li><i data-feather="check"></i><span>Sınırsız Revizyon
                                                                     </span></li>
                                                             </ul>
-                                                            <a class="rn-btn" href="#"><span>CV İNDİR</span></a>
+{{--                                                            <a class="rn-btn" href="#"><span>CV İNDİR</span></a>--}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -352,7 +352,7 @@
                                                 <div data-aos-delay="600" class="col-lg-7 contact-input">
                                                     <div class="contact-form-wrapper ml--0">
                                                         <div class="introduce">
-                                                            <form class="rnt-contact-form rwt-dynamic-form row" id="" method="POST" action="{{ route('contact') }}">
+                                                            <form class="rnt-contact-form rwt-dynamic-form row" method="post" action="{{ route('contact') }}">
                                                                 @csrf
                                                                 <div class="col-lg-6">
                                                                     <div class="form-group">
@@ -419,13 +419,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="footer-area text-center">
-
                     <div class="logo">
-                        <a href="index-2.html">
-                            <img src="{{ asset($siteSetting[0]['logo']) }}" alt="logo">
+                        <a href="/">
+                            <img src="{{ asset($siteSetting[0]['logo']) }}" alt="logo" style="border-radius: 50%; ">
                         </a>
                     </div>
-
                     <p class="description mt--30">© 2021 - {{ date('Y') }}. Tüm hakları <a target="_blank" href="{{ env('APP_URL') }}">Tuğran Demirel</a> tarafından saklıdır.</p>
                 </div>
             </div>
