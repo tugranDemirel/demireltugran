@@ -133,9 +133,39 @@
                                     <br><small class="text-muted">Site iletişim kısmında bulunan resim</small>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                               <div class="col-md-3">
+                                   <label class="col-md-3 col-form-label" for="l16">Facebook Hesabı</label>
+                                   <div class="col-md-9">
+                                       <input id="l16" class="form-control"  type="input" name="facebook" value="{{ $siteSetting[0]['facebook'] }}">
+                                       <br><small class="text-muted">Tam url belirtiniz.</small>
+                                   </div>
+                               </div>
+                                <div class="col-md-3">
+                                   <label class="col-md-3 col-form-label" for="l16">İnstagram Hesabı</label>
+                                   <div class="col-md-9">
+                                       <input id="l16" class="form-control" type="input" name="instagram" value="{{ $siteSetting[0]['instagram'] }}">
+                                       <br><small class="text-muted">Tam url belirtiniz.</small>
+                                   </div>
+                               </div>
+                                <div class="col-md-3">
+                                   <label class="col-md-3 col-form-label" for="l16">Linkedin Hesabı</label>
+                                   <div class="col-md-9">
+                                       <input id="l16" class="form-control" type="input" name="linkedin" value="{{ $siteSetting[0]['linkedin'] }}">
+                                       <br><small class="text-muted">Tam url belirtiniz.</small>
+                                   </div>
+                               </div>
+                                <div class="col-md-3">
+                                   <label class="col-md-3 col-form-label" for="l16">Github Hesabı</label>
+                                   <div class="col-md-9">
+                                       <input id="l16" class="form-control" type="input" name="github" value="{{ $siteSetting[0]['github'] }}">
+                                       <br><small class="text-muted">Tam url belirtiniz.</small>
+                                   </div>
+                               </div>
+                            </div>
                             <div class="form-actions">
                                 <div class="form-group row">
-                                    <div class="col-md-9 ml-md-auto btn-list">
+                                    <div class="col-md-12 ml-md-auto btn-list">
                                         <button class="btn btn-primary btn-rounded" type="submit">Güncelle</button>
                                     </div>
                                 </div>

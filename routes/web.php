@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [App\Http\Controllers\front\home\indexController::class, 'index']);
+Route::post('/contact', [App\Http\Controllers\front\home\indexController::class, 'contact'])->name('contact');
 
 Auth::routes();
 
@@ -44,15 +43,7 @@ Route::name('home.')->prefix('home')->middleware('auth')->group(function (){
         Route::get('/delete/{id}', [App\Http\Controllers\admin\reference\indexController::class, 'delete'])->name('delete');
         Route::post('/data', [App\Http\Controllers\admin\reference\indexController::class, 'data'])->name('data');
     });
-    Route::prefix('media')->name('media.')->group(function (){
-        Route::get('/', [App\Http\Controllers\admin\socialMedia\indexController::class, 'index'])->name('index');
-        Route::get('/create', [App\Http\Controllers\admin\socialMedia\indexController::class, 'create'])->name('create');
-        Route::post('/store', [App\Http\Controllers\admin\socialMedia\indexController::class, 'store'])->name('store');
-        Route::get('/edit/{id}', [App\Http\Controllers\admin\socialMedia\indexController::class, 'edit'])->name('edit');
-        Route::post('/update/{id}', [App\Http\Controllers\admin\socialMedia\indexController::class, 'update'])->name('update');
-        Route::get('/delete/{id}', [App\Http\Controllers\admin\socialMedia\indexController::class, 'delete'])->name('delete');
-        Route::post('/data', [App\Http\Controllers\admin\socialMedia\indexController::class, 'data'])->name('data');
-    });
+
     Route::prefix('work')->name('work.')->group(function (){
         Route::get('/', [App\Http\Controllers\admin\work\indexController::class, 'index'])->name('index');
         Route::get('/create', [App\Http\Controllers\admin\work\indexController::class, 'create'])->name('create');
