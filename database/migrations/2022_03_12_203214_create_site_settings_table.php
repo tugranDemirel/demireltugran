@@ -26,6 +26,11 @@ class CreateSiteSettingsTable extends Migration
             $table->string('svg')->nullable();
             $table->string('phoneNumber');
             $table->string('email');
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('github')->nullable();
+            $table->string('twitter')->nullable();
             $table->string('contactTitle');
             $table->string('contactText');
             $table->string('contactImage')->nullable();
