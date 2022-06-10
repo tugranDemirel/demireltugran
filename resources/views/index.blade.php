@@ -222,7 +222,7 @@
                                     </div>
                                     <!-- End about Area -->
                                 </div>
-
+                                @if(\App\Models\Work::all()->count() > 0)
                                 @if(!empty(\App\Models\Work::all()))
                                 <div class="tab-pane fade" id="v-pills-Wordpress" role="tabpanel" aria-labelledby="v-pills-wordpress-tab">
                                     <!-- Start Portfolio Area -->
@@ -268,6 +268,46 @@
                                     </div>
                                     <!-- End portfolio Area -->
                                 </div>
+                                @endif
+                                @else
+                                    <div class="tab-pane fade" id="v-pills-Wordpress" role="tabpanel" aria-labelledby="v-pills-wordpress-tab">
+                                        <!-- Start Portfolio Area -->
+                                        <div class="rn-portfolio-area" id="portfolio">
+                                            <div class="container">
+                                                <div class="row mt--10 mt_md--10 mt_sm--10 mt-dec-30">
+                                                    <!-- Start Single Portfolio -->
+                                                        <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--30 mt_md--30 mt_sm--30">
+                                                            <div class="rn-portfolio" data-toggle="modal" data-target="">
+                                                                <div class="inner">
+                                                                    <div class="thumbnail">
+                                                                        <a href="javascript:void(0)">
+                                                                            <img src="{{ asset('front/assets/images/noProject/noProject.png') }}" alt="Personal Portfolio Images">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="category-info">
+                                                                            <div class="category-list">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h4 class="title text-center"><a href="javascript:void(0)">Proje Yok<i class="feather-arrow-up-right"></i></a></h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Portfolio -->
+
+                                                </div>
+                                                @if(count(\App\Models\Work::all()) > 9)
+                                                    <div class="row mt--40">
+                                                        <div class="col-12 text-center">
+                                                            <a class="rn-btn" href="#">Daha Fazlası <i class="feather-loader"></i></a>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <!-- End portfolio Area -->
+                                    </div>
                                 @endif
                                 @if(!empty(\App\Models\Blog::all()))
                                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tabs">
@@ -433,7 +473,7 @@
 <!-- End Footer Area -->
 
 <!-- Modal Portfolio Body area Start  WORKKKK-->
-
+@if($projects->count() > 0)
 @foreach($projects as $k => $v)
 <div class="modal fade" id="#work{{ $v['id'] }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -482,6 +522,7 @@
     </div>
 </div>
 @endforeach
+@endif
 <!-- End Modal Portfolio area -->
 
 <!-- Modal Blog Body area Start -->
